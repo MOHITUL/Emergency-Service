@@ -35,8 +35,13 @@ callButtons.forEach(btn => {
 
         alert(`Calling ${serviceName} (${serviceNumber})...`);
 
+        //   time
+         const time = new Date().toLocaleTimeString();
+    
+
         const li = document.createElement("li");
-        li.innerHTML = `<span class = "font-bold text-lg">${serviceName}</span> <br> ${serviceNumber}`;
+        li.innerHTML = `<span class = "font-bold text-lg">${serviceName}</span> <span class = "font-bold text-lg">${time}</span>   <br> ${serviceNumber}`;
+        
         callHistory.appendChild(li);
     })
 })
@@ -69,4 +74,6 @@ copyButtons.forEach(btn => {
         alert(`Copied ${serviceName} (${serviceNumber}) to clipboard`)
     })
 })
+
+
 
