@@ -41,3 +41,11 @@ callButtons.forEach(btn => {
     })
 })
 
+
+// clear history
+
+const clearHistoryBtn = document.getElementById("clearHistory");
+clearHistoryBtn.addEventListener("click", () => {
+    callHistory.innerHTML = "";
+})
+
