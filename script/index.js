@@ -49,3 +49,24 @@ clearHistoryBtn.addEventListener("click", () => {
     callHistory.innerHTML = "";
 })
 
+// copy section
+
+let copyCount = 2;
+const copyCountElement = document.getElementById("copyCount");
+const copyButtons = document.querySelectorAll(".copy-btn");
+
+copyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const card = btn.closest(".bg-white");
+        const serviceName = card.querySelector(".service-name").textContent;
+        const serviceNumber = card.querySelector(".service-number").textContent;
+
+        navigator.clipboard.writeText(serviceNumber);
+
+        copyCount++;
+        copyCountElement.textContent = copyCount;
+
+        alert(`Copied ${serviceName} (${serviceNumber}) to clipboard`)
+    })
+})
+
