@@ -36,7 +36,7 @@ callButtons.forEach(btn => {
         alert(`Calling ${serviceName} (${serviceNumber})...`);
 
         const li = document.createElement("li");
-        li.textContent = `${serviceName} - ${serviceNumber}`;
+        li.innerHTML = `<span class = "font-bold text-lg">${serviceName}</span> <br> ${serviceNumber}`;
         callHistory.appendChild(li);
     })
 })
